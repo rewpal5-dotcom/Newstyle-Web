@@ -1,23 +1,21 @@
-# Newstyle
+# Newstyle-Web
 
-Ek chhoti si wrapper site — upar **Newstyle** naam, aur neeche aapki website seedha embed hoti hai.
+Upar **Newstyle** ka live generator, aur neeche patli bar mein aapki website ka link.
 
 Live: **https://rewpal5-dotcom.github.io/Newstyle-Web/**
 
-## Kaise kaam karta hai
+## Kya hai isme
 
-- Header mein sirf project ka naam "Newstyle" dikhta hai.
-- Neeche `<iframe>` mein website khulti hai: `https://neon-name8700.base44.app/`
-- "Naye tab mein" button se wahi website alag tab mein khul jaati hai.
-- "Reload" button iframe ko dobara load karta hai.
+- Poora Newstyle name-style generator (40 styles, PNG download, share link) — sab kuch isi page par live chalta hai, koi iframe nahi.
+- Neeche fixed bar: `neon-name8700.base44.app` ka link, "Website kholen" button ke saath.
 
-## Note
+## Kyun iframe nahi
 
-Kuch websites security header (`X-Frame-Options` / CSP `frame-ancestors`) ki wajah se doosri site ke andar khulna block kar deti hain. Aisa ho to page par "Website kholen" button se naye tab mein kholein.
+Base44 apni hosted apps par `X-Frame-Options` / CSP bhejta hai, isliye woh site kisi doosri page ke andar nahi khulti. Isliye yahan generator ka apna live version chalaya gaya hai aur aapki site ka link neeche rakha gaya hai.
 
-## Doosri website lagani ho to
+## Badlav
 
-`index.html` mein do jagah URL badal dein — iframe ka `src` aur header/footer ke links.
+Neeche wali link badalni ho to `index.html` mein `.sitebar` block ka `href` aur text badal dein.
 
 ## Tech
 
