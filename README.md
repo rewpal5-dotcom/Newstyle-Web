@@ -1,25 +1,20 @@
 # Newstyle-Web
 
-Upar **Newstyle** ka live generator, aur neeche patli bar mein aapki website ka link.
+Newstyle ka standalone version — poori site ek hi file mein.
 
 Live: **https://rewpal5-dotcom.github.io/Newstyle-Web/**
 
 ## Kya hai isme
 
-- Poora Newstyle name-style generator (40 styles, PNG download, share link) — sab kuch isi page par live chalta hai, koi iframe nahi.
-- Neeche fixed bar: `neon-name8700.base44.app` ka link, "Website kholen" button ke saath.
-
-## Kyun iframe nahi
-
-Base44 apni hosted apps par `X-Frame-Options` / CSP bhejta hai, isliye woh site kisi doosri page ke andar nahi khulti. Isliye yahan generator ka apna live version chalaya gaya hai aur aapki site ka link neeche rakha gaya hai.
-
-## Badlav
-
-Neeche wali link badalni ho to `index.html` mein `.sitebar` block ka `href` aur text badal dein.
+- 40 name styles, 10 categories (Neon, 3D, Metallic, Outline, Glow, Retro, Minimal, Gaming, Nature, Fun)
+- Live preview, search, category filter, random style
+- PNG download (1600x600) — WhatsApp DP, thumbnail, banner ke liye
+- Shareable link (`?name=...&style=...`) aur WhatsApp share
+- Koi iframe nahi, koi external site nahi, koi dependency nahi — sab kuch isi page par
 
 ## Tech
 
-Single file, vanilla HTML + CSS + JS. Koi dependency nahi.
+Single file, vanilla HTML + CSS + JS. Fonts system ke hain, koi external request nahi.
 
 ## License
 
