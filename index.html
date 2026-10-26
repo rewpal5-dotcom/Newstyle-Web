@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Newstyle</title>
+<meta name="description" content="Newstyle — apni website ek hi jagah kholiye.">
+<meta name="theme-color" content="#0a0f18">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+<style>
+  :root{
+    --bar:64px;
+    --bg:#07090f;
+    --ink:#e8eefc;
+    --muted:#8fa0b8;
+    --line:rgba(255,255,255,.10);
+    --cyan:#22d3ee;
+    --violet:#a78bfa;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;
+    display:flex;flex-direction:column;min-height:100vh;-webkit-font-smoothing:antialiased;
+  }
+
+  header{
+    flex:0 0 auto;height:var(--bar);display:flex;align-items:center;gap:12px;
+    padding:0 16px;border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,rgba(12,17,25,.98),rgba(8,11,17,.98));
+    position:relative;z-index:5;
+  }
+  .mark{
+    width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:0 0 auto;
+    background:linear-gradient(140deg,#22d3ee,#a78bfa 55%,#f472b6);color:#06080d;
+    font-weight:900;font-size:1.05rem;box-shadow:0 6px 18px rgba(34,211,238,.28)
+  }
+  .titles{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+  .titles b{font-size:1.06rem;font-weight:800;letter-spacing:-.4px;color:#fff}
+  .titles span{font-size:.72rem;color:var(--muted);letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+  .spacer{margin-left:auto}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-weight:700;font-size:.85rem;
+    padding:9px 15px;border-radius:11px;border:1px solid var(--line);color:#dbe7f5;
+    background:rgba(255,255,255,.05);transition:background .15s ease,transform .15s ease;white-space:nowrap
+  }
+  .btn:hover{background:rgba(255,255,255,.10);transform:translateY(-1px)}
+  .btn-primary{
+    background:linear-gradient(135deg,#22d3ee,#a78bfa);color:#06080d;border-color:transparent;
+    box-shadow:0 8px 22px rgba(34,211,238,.22)
+  }
+  @media(max-width:560px){
+    .titles span{display:none}
+    .btn .label-full{display:none}
+  }
+
+  .frame-wrap{position:relative;flex:1 1 auto;min-height:0;background:#05070b}
+  iframe{display:block;width:100%;height:100%;border:0;background:#fff}
+
+  /* fallback / loader */
+  .overlay{
+    position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:28px;
+    background:radial-gradient(600px 300px at 50% 0%,rgba(34,211,238,.10),transparent 70%),#05070b;
+    transition:opacity .35s ease,visibility .35s ease;
+  }
+  .overlay.hide{opacity:0;visibility:hidden}
+  .overlay .card{max-width:460px}
+  .overlay .spin{
+    width:34px;height:34px;margin:0 auto 18px;border-radius:50%;
+    border:3px solid rgba(255,255,255,.14);border-top-color:var(--cyan);animation:sp 900ms linear infinite
+  }
+  @keyframes sp{to{transform:rotate(360deg)}}
+  .overlay h1{font-size:1.15rem;margin:0 0 8px;color:#fff;letter-spacing:-.3px}
+  .overlay p{margin:0 0 18px;color:var(--muted);font-size:.9rem}
+  .hint{
+    margin-top:16px;font-size:.76rem;color:#6f8199;line-height:1.5
+  }
+  footer{
+    flex:0 0 auto;border-top:1px solid var(--line);padding:8px 16px;font-size:.74rem;color:#6f8199;
+    display:flex;gap:10px;flex-wrap:wrap;justify-content:space-between;align-items:center;background:#080b11
+  }
+  footer a{color:#9fe9f5;text-decoration:none}
+  footer a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="mark">N</div>
+  <div class="titles">
+    <b>Newstyle</b>
+    <span id="siteLabel">neon-name8700.base44.app</span>
+  </div>
+  <div class="spacer"></div>
+  <a class="btn" id="openBtn" href="https://neon-name8700.base44.app/" target="_blank" rel="noopener">
+    ↗ <span class="label-full">Naye tab mein</span>
+  </a>
+  <a class="btn btn-primary" id="reloadBtn" href="#" role="button">⟳ Reload</a>
+</header>
+
+<div class="frame-wrap">
+  <iframe
+    id="site"
+    src="https://neon-name8700.base44.app/"
+    title="Newstyle website"
+    referrerpolicy="no-referrer-when-downgrade"
+    allow="clipboard-write; fullscreen; camera; microphone"
+    loading="eager"></iframe>
+
+  <div class="overlay" id="overlay">
+    <div class="card">
+      <div class="spin"></div>
+      <h1>Website khul rahi hai…</h1>
+      <p>Neeche aapki website load ho rahi hai. Agar yahan khaali dikhe, to website ne embed karna block kiya hai — upar "Naye tab mein" dabayein.</p>
+      <a class="btn btn-primary" href="https://neon-name8700.base44.app/" target="_blank" rel="noopener">Website kholen ↗</a>
+      <div class="hint">Kuch websites security ki wajah se doosri site ke andar khulna allow nahi karti. Us case mein naya tab hi sahi tareeka hai.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div>Newstyle · <span id="yr">2026</span></div>
+  <div>Website: <a href="https://neon-name8700.base44.app/" target="_blank" rel="noopener">neon-name8700.base44.app</a></div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var frame = document.getElementById("site");
+  var overlay = document.getElementById("overlay");
+  var reload = document.getElementById("reloadBtn");
+  var SRC = "https://neon-name8700.base44.app/";
+
+  var done = false;
+  function hide(){
+    if (done) return;
+    done = true;
+    overlay.classList.add("hide");
+  }
+
+  frame.addEventListener("load", function(){
+    // give the page a moment to paint, then reveal
+    setTimeout(hide, 600);
+  });
+
+  // if nothing loads in 12s, still reveal the frame area (user can use the button)
+  setTimeout(hide, 12000);
+
+  reload.addEventListener("click", function(e){
+    e.preventDefault();
+    done = false;
+    overlay.classList.remove("hide");
+    frame.src = SRC + "?r=" + Date.now();
+  });
+
+  document.getElementById("yr").textContent = new Date().getFullYear();
+})();
+</script>
+
+</body>
+</html>
